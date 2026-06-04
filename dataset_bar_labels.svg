@@ -1,0 +1,39 @@
+<svg width="900" height="500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="450" y="40" font-size="22" font-weight="bold" text-anchor="middle" fill="#333">Bar Graph: Dataset Labels</text>
+  <text x="450" y="65" font-size="14" text-anchor="middle" fill="#555">Figure 3.3.1.1.1 - Label distribution (4350 Normal, 4350 Fraudulent)</text>
+
+  <!-- Axes -->
+  <line x1="100" y1="420" x2="820" y2="420" stroke="#333" stroke-width="2"/>
+  <line x1="100" y1="420" x2="100" y2="100" stroke="#333" stroke-width="2"/>
+
+  <!-- Y-axis ticks and labels (0 to 4500 step 900) -->
+  <g fill="#333" font-size="12">
+    <line x1="95" y1="420" x2="100" y2="420" stroke="#333"/>
+    <text x="80" y="425" text-anchor="end">0</text>
+    <line x1="95" y1="360" x2="100" y2="360" stroke="#333"/>
+    <text x="80" y="365" text-anchor="end">900</text>
+    <line x1="95" y1="300" x2="100" y2="300" stroke="#333"/>
+    <text x="80" y="305" text-anchor="end">1800</text>
+    <line x1="95" y1="240" x2="100" y2="240" stroke="#333"/>
+    <text x="80" y="245" text-anchor="end">2700</text>
+    <line x1="95" y1="180" x2="100" y2="180" stroke="#333"/>
+    <text x="80" y="185" text-anchor="end">3600</text>
+    <line x1="95" y1="120" x2="100" y2="120" stroke="#333"/>
+    <text x="80" y="125" text-anchor="end">4500</text>
+  </g>
+
+  <!-- Bars (max 4500 -> height 300; chart origin y=420) -->
+  <!-- Normal: 4350 -->
+  <rect x="220" y="130" width="140" height="290" fill="#2E86AB" rx="4"/>
+  <text x="290" y="120" font-size="13" text-anchor="middle" fill="#2E86AB" font-weight="bold">4350</text>
+  <text x="290" y="445" font-size="14" text-anchor="middle" fill="#333">Normal</text>
+
+  <!-- Fraudulent: 4350 -->
+  <rect x="540" y="130" width="140" height="290" fill="#C73E1D" rx="4"/>
+  <text x="610" y="120" font-size="13" text-anchor="middle" fill="#C73E1D" font-weight="bold">4350</text>
+  <text x="610" y="445" font-size="14" text-anchor="middle" fill="#333">Fraudulent</text>
+
+  <!-- Notes -->
+  <text x="450" y="480" font-size="12" text-anchor="middle" fill="#666">Counts set to 4350 vs 4350. Adjust bars/axis if your dataset changes.</text>
+</svg>

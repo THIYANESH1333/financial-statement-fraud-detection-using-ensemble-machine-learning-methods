@@ -1,0 +1,75 @@
+<svg width="800" height="1000" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="400" y="40" font-size="22" font-weight="bold" text-anchor="middle" fill="#333">System Flow Diagram of Financial Statement Fraud Detection</text>
+
+  <!-- Dataset (Cylinder) -->
+  <ellipse cx="400" cy="100" rx="80" ry="30" fill="white" stroke="#333" stroke-width="2"/>
+  <rect x="320" y="100" width="160" height="40" fill="white" stroke="#333" stroke-width="2"/>
+  <ellipse cx="400" cy="140" rx="80" ry="30" fill="white" stroke="#333" stroke-width="2"/>
+  <text x="400" y="120" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">Financial Data</text>
+
+  <!-- Arrow 1 -->
+  <line x1="400" y1="170" x2="400" y2="200" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Data Preprocessing (Rectangle) -->
+  <rect x="280" y="200" width="240" height="60" rx="10" fill="white" stroke="#333" stroke-width="2"/>
+  <text x="400" y="235" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">Financial Data Preprocessing</text>
+
+  <!-- Arrow 2 -->
+  <line x1="400" y1="260" x2="400" y2="290" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Feature Extraction (Rectangle) -->
+  <rect x="280" y="290" width="240" height="60" rx="10" fill="white" stroke="#333" stroke-width="2"/>
+  <text x="400" y="325" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">Feature Extraction</text>
+  <text x="400" y="345" font-size="12" text-anchor="middle" fill="#333">(TF-IDF, Numerical, Sentiment)</text>
+
+  <!-- Arrow 3 -->
+  <line x1="400" y1="350" x2="400" y2="380" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Training Base Classifiers (Rectangle) -->
+  <rect x="280" y="380" width="240" height="60" rx="10" fill="white" stroke="#333" stroke-width="2"/>
+  <text x="400" y="415" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">Training Base Classifiers</text>
+
+  <!-- Branching Arrows from Training Base Classifiers -->
+  <line x1="400" y1="440" x2="400" y2="470" stroke="#333" stroke-width="2"/>
+  <line x1="400" y1="470" x2="180" y2="470" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="400" y1="470" x2="400" y2="470" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="400" y1="470" x2="620" y2="470" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- SVM Classifier (Rectangle) -->
+  <rect x="80" y="470" width="200" height="60" rx="10" fill="white" stroke="#333" stroke-width="2"/>
+  <text x="180" y="505" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">SVM Classifier</text>
+
+  <!-- XGBoost Classifier (Rectangle) -->
+  <rect x="300" y="470" width="200" height="60" rx="10" fill="white" stroke="#333" stroke-width="2"/>
+  <text x="400" y="505" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">XGBoost Classifier</text>
+
+  <!-- Logistic Regression Classifier (Rectangle) -->
+  <rect x="520" y="470" width="200" height="60" rx="10" fill="white" stroke="#333" stroke-width="2"/>
+  <text x="620" y="505" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">Logistic Regression</text>
+
+  <!-- Arrows from Classifiers to Ensemble -->
+  <line x1="180" y1="530" x2="180" y2="560" stroke="#333" stroke-width="2"/>
+  <line x1="400" y1="530" x2="400" y2="560" stroke="#333" stroke-width="2"/>
+  <line x1="620" y1="530" x2="620" y2="560" stroke="#333" stroke-width="2"/>
+  <line x1="180" y1="560" x2="620" y2="560" stroke="#333" stroke-width="2"/>
+  <line x1="400" y1="560" x2="400" y2="590" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Voting Classifier Ensemble (Wide Rectangle) -->
+  <rect x="180" y="590" width="440" height="60" rx="10" fill="white" stroke="#333" stroke-width="2"/>
+  <text x="400" y="625" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">Voting Classifier Ensemble</text>
+
+  <!-- Arrow to Fraud Prediction -->
+  <line x1="400" y1="650" x2="400" y2="680" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Fraud Prediction (Rectangle) -->
+  <rect x="280" y="680" width="240" height="60" rx="10" fill="white" stroke="#333" stroke-width="2"/>
+  <text x="400" y="715" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">Fraud Prediction</text>
+
+  <!-- Arrowhead definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
+    </marker>
+  </defs>
+</svg>

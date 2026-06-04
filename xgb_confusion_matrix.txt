@@ -1,0 +1,19 @@
+Confusion Matrix (XGBoost)
+[[15  0]
+ [ 0  5]]
+
+Metrics
+Accuracy:  1.0000
+Precision: 1.0000
+Recall:    1.0000
+F1-Score:  1.0000
+
+Classification Report
+              precision    recall  f1-score   support
+
+           0     1.0000    1.0000    1.0000        15
+           1     1.0000    1.0000    1.0000         5
+
+    accuracy                         1.0000        20
+   macro avg     1.0000    1.0000    1.0000        20
+weighted avg     1.0000    1.0000    1.0000        20

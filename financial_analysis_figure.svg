@@ -1,0 +1,78 @@
+<svg width="1000" height="800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="500" y="30" font-size="20" font-weight="bold" text-anchor="middle" fill="#333">Figure 1.1.1 - Financial Statement Analysis</text>
+  <text x="500" y="55" font-size="16" text-anchor="middle" fill="#333">Two Main Accounting Phases</text>
+  
+  <!-- Revenue Recognition Phase (Top Left) -->
+  <rect x="50" y="100" width="280" height="150" rx="10" fill="#A23B72" stroke="white" stroke-width="2"/>
+  <text x="190" y="130" font-size="14" font-weight="bold" text-anchor="middle" fill="white">Revenue Recognition Phase</text>
+  <text x="70" y="160" font-size="11" fill="white">• Sales Revenue</text>
+  <text x="70" y="180" font-size="11" fill="white">• Service Revenue</text>
+  <text x="70" y="200" font-size="11" fill="white">• Interest Revenue</text>
+  <text x="70" y="220" font-size="11" fill="white">• Accrual Accounting</text>
+  
+  <!-- Expense Matching Phase (Top Right) -->
+  <rect x="670" y="100" width="280" height="150" rx="10" fill="#F18F01" stroke="white" stroke-width="2"/>
+  <text x="810" y="130" font-size="14" font-weight="bold" text-anchor="middle" fill="white">Expense Matching Phase</text>
+  <text x="690" y="160" font-size="11" fill="white">• Cost of Goods Sold</text>
+  <text x="690" y="180" font-size="11" fill="white">• Operating Expenses</text>
+  <text x="690" y="200" font-size="11" fill="white">• Depreciation</text>
+  <text x="690" y="220" font-size="11" fill="white">• Matching Principle</text>
+  
+  <!-- Central Financial Statement Analysis -->
+  <rect x="360" y="300" width="280" height="120" rx="10" fill="#2E86AB" stroke="white" stroke-width="3"/>
+  <text x="500" y="350" font-size="16" font-weight="bold" text-anchor="middle" fill="white">Financial Statement</text>
+  <text x="500" y="375" font-size="16" font-weight="bold" text-anchor="middle" fill="white">Analysis</text>
+  
+  <!-- Financial Statement Components (Left) -->
+  <rect x="50" y="300" width="250" height="180" rx="10" fill="#F5F5F5" stroke="#333" stroke-width="2"/>
+  <text x="175" y="330" font-size="13" font-weight="bold" text-anchor="middle" fill="#333">Financial Statement</text>
+  <text x="175" y="350" font-size="13" font-weight="bold" text-anchor="middle" fill="#333">Components</text>
+  <text x="70" y="380" font-size="11" fill="#333">• Income Statement</text>
+  <text x="70" y="405" font-size="11" fill="#333">• Balance Sheet</text>
+  <text x="70" y="430" font-size="11" fill="#333">• Cash Flow Statement</text>
+  <text x="70" y="455" font-size="11" fill="#333">• Notes to Accounts</text>
+  
+  <!-- Analysis Methods (Right) -->
+  <rect x="700" y="300" width="250" height="180" rx="10" fill="#F5F5F5" stroke="#333" stroke-width="2"/>
+  <text x="825" y="330" font-size="13" font-weight="bold" text-anchor="middle" fill="#333">Analysis Methods</text>
+  <text x="720" y="370" font-size="11" fill="#333">• Ratio Analysis</text>
+  <text x="720" y="395" font-size="11" fill="#333">• Trend Analysis</text>
+  <text x="720" y="420" font-size="11" fill="#333">• Machine Learning</text>
+  <text x="720" y="445" font-size="11" fill="#333">• Statistical Models</text>
+  
+  <!-- Accounting Cycle -->
+  <circle cx="500" cy="550" r="60" fill="none" stroke="#333" stroke-width="2" stroke-dasharray="5,5"/>
+  <text x="500" y="540" font-size="12" font-weight="bold" text-anchor="middle" fill="#333" font-style="italic">Accounting</text>
+  <text x="500" y="560" font-size="12" font-weight="bold" text-anchor="middle" fill="#333" font-style="italic">Cycle</text>
+  
+  <!-- Fraud Detection Box -->
+  <rect x="150" y="650" width="700" height="80" rx="10" fill="#C73E1D" stroke="white" stroke-width="2"/>
+  <text x="500" y="690" font-size="14" font-weight="bold" text-anchor="middle" fill="white">Fraud Detection: Normal | Suspicious | Manipulated | Fraudulent</text>
+  <text x="500" y="760" font-size="12" font-weight="bold" text-anchor="middle" fill="#333">Classification Categories</text>
+  
+  <!-- Arrows -->
+  <defs>
+    <marker id="arrowPurple" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#A23B72" />
+    </marker>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#F18F01" />
+    </marker>
+    <marker id="arrowDark" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333" />
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#C73E1D" />
+    </marker>
+  </defs>
+  
+  <path d="M 250 250 Q 300 270 360 320" stroke="#A23B72" stroke-width="3" fill="none" marker-end="url(#arrowPurple)"/>
+  <path d="M 750 250 Q 700 270 640 320" stroke="#F18F01" stroke-width="3" fill="none" marker-end="url(#arrowOrange)"/>
+  <path d="M 300 360 L 360 360" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowDark)"/>
+  <path d="M 640 360 L 700 360" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowDark)"/>
+  <path d="M 500 650 L 500 420" stroke="#C73E1D" stroke-width="3" fill="none" marker-end="url(#arrowRed)"/>
+  
+  <!-- Cycle arrow -->
+  <path d="M 560 550 A 60 60 0 0 1 440 550" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowDark)"/>
+</svg>

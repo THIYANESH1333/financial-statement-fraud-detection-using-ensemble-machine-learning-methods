@@ -1,0 +1,69 @@
+! Delhi Router Configuration
+! Main router for Delhi city
+! Connected to Mumbai (direct), Chennai (direct), and HOP3
+
+enable
+configure terminal
+
+! Basic router configuration
+hostname DELHI
+enable secret cisco123
+service password-encryption
+
+! Interface configurations
+interface FastEthernet0/0
+ description Connection to Mumbai (Direct)
+ ip address 192.168.1.1 255.255.255.0
+ ip ospf cost 100
+ bandwidth 100000
+ no shutdown
+
+interface FastEthernet0/1
+ description Connection to Chennai (Direct)
+ ip address 192.168.2.1 255.255.255.0
+ ip ospf cost 100
+ bandwidth 100000
+ no shutdown
+
+interface FastEthernet1/0
+ description Connection to HOP3
+ ip address 10.1.1.1 255.255.255.0
+ ip ospf cost 20
+ bandwidth 100000
+ no shutdown
+
+! OSPF Configuration
+router ospf 1
+ router-id 1.1.1.1
+ network 192.168.1.0 0.0.0.255 area 0
+ network 192.168.2.0 0.0.0.255 area 0
+ network 10.1.1.0 0.0.0.255 area 0
+ passive-interface default
+ no passive-interface FastEthernet0/0
+ no passive-interface FastEthernet0/1
+ no passive-interface FastEthernet1/0
+
+! RIP Configuration (Alternative)
+router rip
+ version 2
+ network 192.168.1.0
+ network 192.168.2.0
+ network 10.1.1.0
+ no auto-summary
+
+! Static routes (backup)
+ip route 0.0.0.0 0.0.0.0 192.168.1.2
+ip route 192.168.3.0 255.255.255.0 10.1.1.2
+
+! Access control
+access-list 1 permit 192.168.1.0 0.0.0.255
+access-list 1 permit 192.168.2.0 0.0.0.255
+access-list 1 permit 10.1.1.0 0.0.0.255
+
+! Logging
+logging buffered 4096
+logging console
+
+! Save configuration
+write memory
+end

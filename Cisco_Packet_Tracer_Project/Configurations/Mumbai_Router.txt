@@ -1,0 +1,65 @@
+! Mumbai Router Configuration (Destination)
+! Main router for Mumbai city
+! Connected to Delhi (direct) and HOP2
+
+enable
+configure terminal
+
+! Basic router configuration
+hostname MUMBAI
+enable secret cisco123
+service password-encryption
+
+! Interface configurations
+interface FastEthernet0/0
+ description Connection to Delhi (Direct)
+ ip address 192.168.1.2 255.255.255.0
+ ip ospf cost 100
+ bandwidth 100000
+ no shutdown
+
+interface FastEthernet0/1
+ description Connection to HOP2
+ ip address 10.0.2.2 255.255.255.0
+ ip ospf cost 10
+ bandwidth 100000
+ no shutdown
+
+interface Loopback0
+ description Mumbai Loopback
+ ip address 192.168.10.1 255.255.255.0
+
+! OSPF Configuration
+router ospf 1
+ router-id 2.2.2.2
+ network 192.168.1.0 0.0.0.255 area 0
+ network 10.0.2.0 0.0.0.255 area 0
+ network 192.168.10.0 0.0.0.255 area 0
+ passive-interface default
+ no passive-interface FastEthernet0/0
+ no passive-interface FastEthernet0/1
+
+! RIP Configuration (Alternative)
+router rip
+ version 2
+ network 192.168.1.0
+ network 10.0.2.0
+ network 192.168.10.0
+ no auto-summary
+
+! Static routes (backup)
+ip route 0.0.0.0 0.0.0.0 192.168.1.1
+ip route 192.168.2.0 255.255.255.0 10.0.2.1
+
+! Access control
+access-list 1 permit 192.168.1.0 0.0.0.255
+access-list 1 permit 10.0.2.0 0.0.0.255
+access-list 1 permit 192.168.10.0 0.0.0.255
+
+! Logging
+logging buffered 4096
+logging console
+
+! Save configuration
+write memory
+end
